@@ -1,0 +1,78 @@
+<html>
+<head>
+<title>EducationHIT by H.T.Shekhada</title>
+<SCRIPT LANGUAGE="JavaScript">
+ var nr=0;
+ function numericCheck(){
+  nr1=document.isn.rollno.value;
+  flg=0;
+  str="";
+  spc=""
+  arw="";
+  for (var i=0;i<nr1.length;i++){
+   cmp="0123456789"
+   tst=nr1.substring(i,i+1)
+   if (cmp.indexOf(tst)<0){
+    flg++;
+    str+=" "+tst;
+    spc+=tst;
+    arw+="^";
+   }
+   else{arw+="_";}
+  }
+  if (flg!=0){
+   if (spc.indexOf(" ")>-1) {
+    str+=" and a space";
+    }
+alert(nr1+"\r"+arw+"\r  ROLL NO. must be NUMARIC. I found "+flg+" IS NOT VALID: "+str+".");
+  }
+ }
+</SCRIPT>
+</head>
+<body bgcolor="rgb(133,213,135)">
+<center><table border="0" width="" >
+<tr><th><strong><font face="Times New Roman" size="6" color="blue">Type Your Information Below.</font></strong></th></tr>
+</table></center>
+<br><br><center>
+<table border="3" width="" bordercolor="rgb(0,0,255)">
+<form name="isn" method="GET" action="preKasoti1.html">
+<tr><th width=400 height=50 colspan=2><strong><font face="Times New Roman" size="6" color="red">Give Your Details...</strong></font> </th></tr>
+<tr><th> <p align="left"><strong>&nbsp;&nbsp;&nbsp;<font face="Times New Roman" size="5" color="">Name</font></strong></th>
+<th><p align="left"><input type="text" name="name" size="30" style="font-family:Times New Roman;font-size:15pt"></strong></th></tr>
+<tr><th><p align="left"><strong>&nbsp;&nbsp;&nbsp;<font face="Times New Roman" size="5" color="">Roll Number</font></p></th> 
+<th><p align="left"><input  type="text" name="rollno" size="20" style="font-family:Times New Roman;font-size:15pt" color="green" value="" onKeyUp="numericCheck()"></strong></p></th></tr>
+<tr><th><p align="left"><strong>&nbsp;&nbsp;&nbsp;<font face="Times New Roman" size="5" color="">Standard</font></p></th>
+<th><p align="left"><select  name="std" size="1" style="font-family:Times New Roman;font-size:15pt" >
+<option value=5>5</option>
+<option value=6>6</option>
+<option value=8>8</option>
+<option value=9>9</option>
+<option value=10>10</option>
+ </select> </strong></p></th></tr>
+<tr><th><p align="left"><strong>&nbsp;&nbsp;&nbsp;<font face="Times New Roman" size="5" color="">Class</font></p></th>
+<th><p align="left"><select  name="class" size="1" style="font-family:Times New Roman;font-size:15pt" >
+<option value=A>A</option>
+ </select> </strong></p></th></tr>
+<tr><th><p align="left"><strong>&nbsp;&nbsp;&nbsp;<font face="Times New Roman" size="5" color="">Subject</font></p></th>
+<th><p align="left"><select  name="subject" size="1" style="font-family:Times New Roman;font-size:18pt" >
+<option value=COMPUTER>COMPUTER</option>
+<option value=ENGLISH>ENGLISH</option>
+<option value=GUJARATI>GUJARATI</option>
+<option value=MATHS>MATHS</option>
+<option value=SCIENCE>SCIENCE</option>
+<option value=SOCIALSTUDY>SOCIALSTUDY</option>
+ </select> </strong></p></th></tr>
+</table>
+<br>
+<br>
+<center><table width=650 border=0>
+<tr><td align="left"><a href="EduHit1.html" target ="_parent">
+<strong><font face="Times New Roman" size="4">Home</font></strong>
+</a></td>
+<th><input type="submit" value="Click This Button To Start Exam" name="submit" style="font-family: Times New Roman; font-size: 18pt" ></th>
+<td align="right"><a href="EduHit1.html" target ="_parent">
+<strong><font face="Times New Roman" size="4">Home</font></strong>
+</a></td></tr></table></center>
+</form>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<html>
+<head>
+<title>EducationHIT by H.T.Shekhada</title>
+<SCRIPT LANGUAGE="JavaScript">
+ var nr=0;
+ function numericCheck(){
+  nr1=document.isn.std.value;
+  flg=0;
+  str="";
+  spc=""
+  arw="";
+  for (var i=0;i<nr1.length;i++){
+   cmp="0123456789"
+   tst=nr1.substring(i,i+1)
+   if (cmp.indexOf(tst)<0){
+    flg++;
+    str+=" "+tst;
+    spc+=tst;
+    arw+="^";
+   }
+   else{arw+="_";}
+  }
+  if (flg!=0){
+   if (spc.indexOf(" ")>-1) {
+    str+=" and a space";
+    }
+alert(nr1+"\r"+arw+"\r  Standard must be NUMARIC. I found "+flg+" IS NOT VALID: "+str+".");
+  }
+ }
+</SCRIPT>
+</head>
+<body bgcolor="rgb(211,255,213)">
+<form name="isn"  method="GET" action="Subject1.html">
+<br><br><center><strong>
+<font face="Times New Roman" size=6 >New Subject Entry</font>
+<br>
+</center></strong>
+<br>
+<center><table border="0">
+<tr><th><strong><font face="Times New Roman" size=5 >Standard</font></th>
+<th><input type="text" name="std" size="20" maxlength="5" onKeyUp="numericCheck()" style="font-family:Times New Roman;font-size:15pt"></strong></th></tr>
+<tr><th><strong><font face="Times New Roman" size=5 >Subject Name</font></th>
+<th><input  type="text" name="sub_name" size="20" maxlength="50" style="font-family:Times New Roman;font-size:15pt"></strong></th></tr>
+<tr><th><strong><font face="Times New Roman" size=5 >Chap Name Font</font></th>
+<th><select  name="F_name" size="1" style="font-family:Times New Roman;font-size:15pt"></strong>
+<option value=Accent1>Accent1</option>
+<option value=Accent2>Accent2</option>
+<option value=Accent3>Accent3</option>
+<option value=Accent4>Accent4</option>
+<option value=Accent5>Accent5</option>
+<option value=Accent6>Accent6</option>
+<option value=Accent7>Accent7</option>
+<option value=Accent8>Accent8</option>
+<option value=Accent9>Accent9</option>
+<option value=Algerian>Algerian</option>
+<option value=Andale!Mono!IPA>Andale Mono IPA</option>
+<option value=Areal>Areal</option>
+<option value=Arial>Arial</option>
+<option value=Arial!Black>Arial Black</option>
+<option value=Arial!Narrow>Arial Narrow</option>
+<option value=Book!Antiqua>Book Antiqua</option>
+<option value=Bookman!Old!Style>Bookman Old Style</option>
+<option value=Century!Gothic>Century Gothic</option>
+<option value=Comic!Sans!MS>Comic Sans MS</option>
+<option value=Copperplate!Gothic!Bold>Copperplate Gothic Bold</option>
+<option value=Copperplate!Gothic!Light>Copperplate Gothic Light</option>
+<option value=Courier!New>Courier New</option>
+<option value=Curlz!MT>Curlz MT</option>
+<option value=Default>Default</option>
+<option value=Dialog>Dialog</option>
+<option value=DialogInput>DialogInput</option>
+<option value=DVBW-TTSurekh>DVBW-TTSurekh</option>
+<option value=DVBW-TTYogesh>DVBW-TTYogesh</option>
+<option value=Garamond>Garamond</option>
+<option value=Gill!Sans!MT>Gill Sans MT</option>
+<option value=GJBW-TTAvantika>GJBW-TTAvantika</option>
+<option value=GJBWTTAvantikaGuj>GJBWTTAvantikaGuj</option>
+<option value=Haettenschweiler>Haettenschweiler</option>
+<option value=Impact>Impact</option>
+<option value=LMG-Arun!Condensed>LMG-Arun Condensed</option>
+<option value=LMG-Paras>LMG-Paras</option>
+<option value=Lucida!Console>Lucida Console</option>
+<option value=Lucida!Handwriting>Lucida Handwriting</option>
+<option value=Lucida!Sans>Lucida Sans</option>
+<option value=Marlett>Marlett</option>
+<option value=Matisse!ITC>Matisse ITC</option>
+<option value=Mercurius!Script!MT!Bold>Mercurius Script MT Bold</option>
+<option value=Monospaced>Monospaced</option>
+<option value=Monotype!Corsiva>Monotype Corsiva</option>
+<option value=MS!Outlook>MS Outlook</option>
+<option value=OCR!A!Extended>OCR A Extended</option>
+<option value=Ransom>Ransom</option>
+<option value=SansSerif>SansSerif</option>
+<option value=Serif>Serif</option>
+<option value=Snap!ITC>Snap ITC</option>
+<option value=Stop>Stop</option>
+<option value=Symbol>Symbol</option>
+<option value=Tahoma>Tahoma</option>
+<option value=Tempus!Sans!ITC>Tempus Sans ITC</option>
+<option value=Times!New!Roman>Times New Roman</option>
+<option value=Trebuchet!MS>Trebuchet MS</option>
+<option value=Verdana>Verdana</option>
+<option value=Viner!Hand!ITC>Viner Hand ITC</option>
+<option value=Vladimir!Script>Vladimir Script</option>
+<option value=Webdings>Webdings</option>
+<option value=Westminster>Westminster</option>
+<option value=Wingdings>Wingdings</option>
+<option value=Wingdings!2>Wingdings 2</option>
+<option value=Wingdings!3>Wingdings 3</option>
+<option value=ZG>ZG</option>
+<option value=ZH>ZH</option>
+<option value=ZS>ZS</option>
+</select></th></tr>
+</table></center><br>
+<center>
+<input type="submit" value=" Submit Subject" name="submit" style="font-family: Times New Roman; font-size: 18pt">&nbsp;&nbsp;&nbsp; 
+</form>
+</center>
+</body>
+</html>

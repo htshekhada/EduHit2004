@@ -1,0 +1,35 @@
+<html>
+<head>
+<SCRIPT LANGUAGE="JavaScript">
+var pos = 10;
+function initArray() {
+ this.length = initArray.arguments.length;
+ for (var i = 0; i < this.length; i++) {
+  this[i] = initArray.arguments[i];
+  }
+}
+var col=new initArray("4b","5b","8b","8b");
+col[0] = "blue";
+col[1] = "White";
+col[2] = "green";
+col[3] = "blue";
+col[4] = "Black";
+col[5] = "green";
+col[6] = "blue";
+col[7] = "Black";
+col[8] = "green";
+col[9] = "blue";
+
+function chgCol() {
+  pos++;
+  if (pos<0||pos>9) {
+    pos = 0;
+    }
+  document.bgColor = col[pos];
+  setTimeout("chgCol()",3000);
+ }
+</SCRIPT>
+</HEAD>
+<BODY onLoad="chgCol()";>
+</BODY>
+</HTML>
